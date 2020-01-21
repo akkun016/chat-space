@@ -8,6 +8,7 @@
 
 ### Association
 - has_many :posts
+- has_many :gruops_users
 - has_many :groups, through: :groups_users
 
 ## groupsテーブル
@@ -18,6 +19,7 @@
 
 ### Association
 - has_many :messages
+- has_many :groups_user
 - has_many :users, through: :groups_users
 
 ## messagesテーブル
