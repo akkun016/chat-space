@@ -1,0 +1,11 @@
+.message-block
+  .message-block__message-title
+    .message-block__message-title__name
+      = message.user.name
+    .message-block__message-title__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .message-block__lower-message
+    - if message.text.present?
+      %p.message-block__lower-message__text
+        = message.text
+    = image_tag message.image,class: 'message-block__lower-message__image' if message.image.present?

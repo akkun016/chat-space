@@ -7,6 +7,7 @@
 }
 
 $white-color: #ffffff;
+$bright-grey:  #fafafa;
 
 .side-bar {
   $section-color: #253141;
@@ -62,7 +63,7 @@ $white-color: #ffffff;
 
 .chat-main {
   $font-color: #333333;
-  background-color: $white-color;
+  background-color:  $bright-grey;
   width: calc(100vw - 300px);
   height: 100vh;
   &__group-info {
@@ -95,10 +96,11 @@ $white-color: #ffffff;
     }
   }
   &__message-list {
-    background-color: #fafafa;
+    background-color: $bright-grey;
     width: 100%;
     height: calc(100vh - 100px - 90px);
     padding: 35px 0 0 40px;
+    overflow: scroll;
     .message-block {
       margin-bottom: 46px;
       &__message-title {
@@ -106,7 +108,7 @@ $white-color: #ffffff;
         margin-bottom: 12px;
         &__name {
           color: $font-color;
-          font-size: 16px;
+          font-size: 18px;
           font-weight: bold;
         }
         &__date {
@@ -115,7 +117,7 @@ $white-color: #ffffff;
           margin-left: 10px;
         }
       }
-      &__message-text {
+      &__lower-message {
         color: #434A54;
         font-size: 14px;
       }
@@ -126,10 +128,10 @@ $white-color: #ffffff;
     width: 100%;
     height: 90px;
     padding: 20px 40px;
-    display: flex;
     .input-message {
       height: 50px;
       width: 100%;
+      display: flex;
       position: relative;
       &__text {
         height: 100%;
@@ -139,20 +141,21 @@ $white-color: #ffffff;
       &__image {
         position: absolute;
         top: 18px;
-        right: 20px;
+        right: 120px;
+        cursor: pointer;
+        .image-form {
+          display: none;
+        }
       }
-      .image-form {
-        display: none;
+      .submit-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        cursor: pointer;
       }
-    }
-    .submit-btn {
-      width: 100px;
-      height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
-      background-color: #38aef0;
-      color: white;
-      cursor: pointer;
     }
   }
 }
