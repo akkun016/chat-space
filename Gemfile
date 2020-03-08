@@ -66,4 +66,4 @@ end
   gem 'haml-rails'
   gem 'font-awesome-sass'
   gem 'devise'
-  gem 'pry-rails'
+  gem 'pry-rails'cd /var/lib
