@@ -72,3 +72,4 @@ end
   gem 'font-awesome-sass'
   gem 'devise'
   gem 'pry-rails'
+  gem 'fog-aws'
