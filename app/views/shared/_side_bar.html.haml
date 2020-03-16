@@ -11,9 +11,9 @@
 
   .side-bar__group-list
     -current_user.groups.each do |group|
-      .group-block
-        = link_to group_messages_path(group) do
-          .group-block__group-name
+      .group
+        = link_to group_messages_path(group), class:'group-block' do
+          .group__group-name
             = group.name
-          .group-block__group-message
+          .group__group-message
             = group.last_message
